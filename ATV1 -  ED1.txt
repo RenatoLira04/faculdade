@@ -1,0 +1,21 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+No momento em que o usuário seleciona a opção "desempilhar" e a pilha está vazia, a função "desempilhar()" é chamada. O comportamento dessa função é o seguinte:
+
+A função tenta acessar o elemento anterior ao último elemento da pilha através da expressão "p.dados[p.ultimo-1]".
+No entanto, como a pilha está vazia, a posição "p.ultimo-1" é inválida, pois "p.ultimo" é igual ao valor de "primeiro" (posição do primeiro elemento) no caso de pilha vazia.
+Assim, ao tentar atribuir o valor zero ao elemento na posição "p.dados[p.ultimo-1]", ocorrerá um comportamento indefinido, pois está sendo acessada uma posição inválida da memória.
+Em seguida, a variável "p.ultimo" é decrementada, mas como a pilha está vazia, isso também resulta em um comportamento indefinido.
+Em resumo, ao chamar a função "desempilhar()" em uma pilha vazia, ocorrerá um comportamento indefinido devido ao acesso a posições inválidas da memória.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O desenvolvedor utilizou uma estrutura de dados do tipo pilha implementada em linguagem C com tamanho fixo. A estrutura consiste em um array de inteiros chamado "dados" com tamanho definido pela constante "tam", uma variável "primeiro" para indicar o índice do primeiro elemento na pilha e uma variável "ultimo" para indicar o índice do próximo espaço disponível na pilha.
+
+Ao selecionar a opção "desempilhar" e a pilha estar vazia, a função desempilhar será executada. Nesse caso, a função tentará acessar o elemento no índice "p.ultimo-1" do array "dados" para modificar seu valor para zero, indicando que o espaço está vazio. Em seguida, o valor de "p.ultimo" será decrementado.
+
+No entanto, como a pilha está vazia, ou seja, não há elementos para desempilhar, essa operação resultará em um comportamento indefinido. Pode ocorrer um erro de tempo de execução, como uma exceção ou falha do programa, ou o programa pode continuar sua execução normalmente, mas com um estado de pilha inválido. Em ambos os casos, a pilha permanecerá vazia após a execução da função desempilhar.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
